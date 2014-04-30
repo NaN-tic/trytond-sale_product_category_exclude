@@ -1,0 +1,59 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:sale.line:"
+msgid "The product \"%s\" is not salable for the party \"%s\"."
+msgstr "El producte \"%s\" no es permet la venda en el tercer \"%s\"."
+
+msgctxt "field:party.party,product_categories:"
+msgid "Categories"
+msgstr "Categories"
+
+msgctxt "field:party.party-product.category,category:"
+msgid "Category"
+msgstr "Categoria"
+
+msgctxt "field:party.party-product.category,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:party.party-product.category,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:party.party-product.category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:party.party-product.category,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:party.party-product.category,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:party.party-product.category,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:party.party-product.category,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:sale.line,avoid_products:"
+msgid "Product Category Domain"
+msgstr "Domini de categoria de producte"
+
+msgctxt "help:party.party,product_categories:"
+msgid "Exclude products when add product in sale lines"
+msgstr "Exclou productes quan s'afegeixin a les linies de venta"
+
+msgctxt "model:party.party-product.category,name:"
+msgid "Party - Product Category"
+msgstr "Tercer - Categoria de producte"
+
+msgctxt "view:party.party:"
+msgid "Product categories"
+msgstr "Categories producte"

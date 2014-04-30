@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- This file is part of the sale_product_category_exclude module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/notebook/page[@id=&quot;sale&quot;]"
+            position="inside">
+        <separator string="Product categories" id="product_categories"/>
+        <field name="product_categories" colspan="4"/>
+    </xpath>
+</data>
