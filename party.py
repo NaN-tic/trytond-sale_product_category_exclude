@@ -20,5 +20,5 @@ class PartyProductCategory(ModelSQL, ModelView):
 class Party:
     __name__ = 'party.party'
     product_categories = fields.Many2Many('party.party-product.category',
-        'party', 'category', 'Categories',
-        help="Exclude products when add product in sale lines")
+        'party', 'category', 'Product Categories to exclude',
+        help="Exclude these categories when products are added in sale lines")

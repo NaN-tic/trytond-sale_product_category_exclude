@@ -5,7 +5,6 @@ copyright notices and license terms. -->
 <data>
     <xpath expr="/form/notebook/page[@id=&quot;sale&quot;]"
             position="inside">
-        <separator string="Product categories" id="product_categories"/>
         <field name="product_categories" colspan="4"/>
     </xpath>
 </data>

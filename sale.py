@@ -10,9 +10,6 @@ __metaclass__ = PoolMeta
 
 class SaleLine:
     __name__ = 'sale.line'
-    avoid_products = fields.Function(fields.One2Many(
-            'product.product', None, 'Product Category Domain'),
-        'get_avoid_products')
 
     @classmethod
     def __setup__(cls):
@@ -22,25 +19,19 @@ class SaleLine:
                     'the party "%s".',
                 })
 
-    def get_avoid_products(self, lines=None):
-        pool = Pool()
-        ProductCategory = pool.get('party.party-product.category')
-        Template = pool.get('product.template')
-        party = self.sale.party
-        product_categories = ProductCategory.search([('party', '=', party)])
-        products = []
-        for product_category in product_categories:
-            templates = Template.search([
-                    ('category', '=', product_category.category)])
-            for template in templates:
-                for product in template.products:
-                    products.append(product.id)
-        return products
-
     @classmethod
     def validate(cls, lines):
+        pool = Pool()
+        PartyProductCategory = pool.get('party.party-product.category')
+
         super(SaleLine, cls).validate(lines)
         for line in lines:
-            if line.product in line.avoid_products:
+            party = line.sale.party
+            party_product_categories = PartyProductCategory.search(
+                [('party', '=', party)])
+            product_categories = [ppc.category for ppc in
+                party_product_categories]
+            if (line.product and line.product.template.category and
+                    line.product.template.category in product_categories):
                 cls.raise_user_error('unsalable_product',
                     (line.product.rec_name, line.sale.party.rec_name))

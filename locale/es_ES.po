@@ -4,11 +4,11 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:sale.line:"
 msgid "The product \"%s\" is not salable for the party \"%s\"."
-msgstr "El producto \"%s\" no se permite la venta en el tercero \"%s\"."
+msgstr "No se permite la venta del producto \"%s\" al tercero \"%s\"."
 
 msgctxt "field:party.party,product_categories:"
-msgid "Categories"
-msgstr "Categorías"
+msgid "Product Categories to exclude"
+msgstr "Categorías de producto a excluir"
 
 msgctxt "field:party.party-product.category,category:"
 msgid "Category"
@@ -42,18 +42,15 @@ msgctxt "field:party.party-product.category,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
-msgctxt "field:sale.line,avoid_products:"
-msgid "Product Category Domain"
-msgstr "Dominio de categoría de producto"
-
 msgctxt "help:party.party,product_categories:"
-msgid "Exclude products when add product in sale lines"
-msgstr "Excluye productos cuando se añaden a las líneas de la venta"
+msgid "Exclude these categories when products are added in sale lines"
+msgstr ""
+"Excluye estas categorías cuando se añaden productos a las líneas de venta."
 
 msgctxt "model:party.party-product.category,name:"
 msgid "Party - Product Category"
-msgstr "Tercer - Categoría de producto"
+msgstr "Tercero - Categoría de producto"
 
 msgctxt "view:party.party:"
 msgid "Product categories"
-msgstr "Categorías productos"
+msgstr "Categorías de productos"
