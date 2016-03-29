@@ -4,10 +4,10 @@
 from trytond.pool import Pool, PoolMeta
 
 __all__ = ['SaleLine']
-__metaclass__ = PoolMeta
 
 
 class SaleLine:
+    __metaclass__ = PoolMeta
     __name__ = 'sale.line'
 
     @classmethod
